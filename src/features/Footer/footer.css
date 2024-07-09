@@ -1,0 +1,43 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 100%;
+    height: 536px;
+    background-color: darkred;
+    justify-content: center;
+    padding: 70px;
+    margin: 100px auto;
+
+    p {
+        color: #FFFFFF;
+    }
+}
+
+.footer-infor {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+
+}
+
+.footer-infor1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 15px;
+    width: 296px;
+
+    h2 {
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+
+    p {
+        font-size: 16px;
+        color: #E6E6E6;
+        font-family: ' Poppins';
+
+    }
+}

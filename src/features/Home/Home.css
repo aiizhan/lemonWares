@@ -1,0 +1,624 @@
+/* Импорт шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Основные стили */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    width: 1340px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 10px 0;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* ............................................................................................*/
+
+
+
+.red-link {
+    position: relative;
+    color: black;
+    /* Цвет текста ссылки */
+    text-decoration: none !important;
+    /* Убираем стандартное подчеркивание */
+}
+
+.red-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    /* Увеличиваем толщину линии до 2 пикселей */
+    background-color: darkred;
+    /* Темно-красный цвет линии */
+    transition: width 0.3s;
+}
+
+.red-link:hover::after {
+    width: 100%;
+}
+
+.red-link:hover {
+    text-decoration: none !important;
+    /* Убираем подчеркивание при наведении */
+}
+
+
+
+
+.red-text-link {
+    position: relative;
+    color: gray;
+    /* Initial text color */
+    text-decoration: none !important;
+    /* Remove default underline */
+}
+
+.red-text-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 3px;
+    /* Line thickness */
+    background-color: darkred;
+    /* Line color */
+    transition: width 0.3s;
+}
+
+.red-text-link:hover::after {
+    width: 100%;
+}
+
+.red-text-link:hover {
+    color: darkred;
+    /* Change text color on hover */
+    text-decoration: none !important;
+    /* Remove underline on hover */
+}
+
+
+
+.hero {
+    display: flex;
+    width: 1215px;
+    height: 521px;
+    margin: 30px auto;
+
+}
+
+.title {
+    width: 608px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    h1 {
+
+        font-size: 64px;
+    }
+
+    p {
+        width: 448px;
+        font-size: 16px;
+    }
+
+
+
+}
+
+.slider-nav {
+
+    button {
+        width: 160px;
+        height: 48px;
+    }
+}
+
+.slider-nav1{
+    display: flex;
+    gap: 20px;
+}
+.btn{
+    display: flex;
+    gap: 20px
+}
+
+
+
+.btn button {
+
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 7px;
+    margin-top: 20px;
+
+}
+
+.btn button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    /* Line thickness */
+    background-color: darkred;
+    /* Line color */
+    transition: width 0.3s;
+}
+
+.btn button:hover::after {
+    width: 100%;
+}
+
+.btn button:hover {
+    background-color: darkred;
+    color: white;
+    box-shadow: 10px 10px 20px rgba(175, 40, 233, 0.5);
+
+}
+
+
+
+/* Keyframe animation for fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to hero section elements */
+.hero div,
+.hero h1,
+.hero p,
+.hero button,
+.hero img {
+    animation: fadeIn 1s ease-out;
+    animation-fill-mode: both;
+    /* Retain the end state */
+}
+
+/* Optional: Apply a slight delay to stagger the animations */
+.slider-nav a:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.slider-nav a:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.slider-nav a:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.slider-nav a:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.title h1 {
+    animation-delay: 1s;
+}
+
+.title p {
+    animation-delay: 1.2s;
+}
+
+.btn button:nth-child(1) {
+    animation-delay: 1.4s;
+}
+
+.btn button:nth-child(2) {
+    animation-delay: 1.6s;
+}
+
+.hero img {
+    animation-delay: 1.8s;
+}
+
+
+/*  ............................................................................*/
+
+
+.whyUs1 {
+    display: flex;
+    width: 1150px;
+    height: 300px;
+    margin: 50px auto;
+}
+
+.truecloud {
+    width: 594px;
+}
+
+.truecloud h2 {
+    font-size: 64px;
+}
+
+.logos {
+    width: 550px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 50px;
+
+}
+
+.logos img {
+    width: 130px;
+}
+
+.benefits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.benefits-item {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 20px;
+
+    }
+
+    p {
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+
+/* Keyframe animations for slide-in and fade-in */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply animation to the elements */
+.whyUs1,
+.benefits-item {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Slide-in animations */
+.whyUs1 {
+    animation-name: slideInLeft;
+}
+
+.benefits-item {
+    animation-name: slideInRight;
+}
+
+/* Optional: Stagger the animations for benefits items */
+.benefits-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.benefits-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.benefits-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.benefits-item:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+
+/*....................................................................... */
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.pricing-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    h1 {
+        font-size: 50px;
+        width: 650px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 25px;
+        text-align: center;
+    }
+
+
+}
+
+.pricing-item1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    span {
+        font-size: 25px;
+    }
+}
+
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    /* Ширина контейнера */
+    margin-bottom: 10px;
+}
+
+.switch-container span {
+    font-size: 14px;
+    color: #555;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.switch input:checked+.slider {
+    background-color: darkred;
+    /* Цвет фона при активации */
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(26px);
+    /* Сдвигаем ползунок на 26px, чтобы он стал справа */
+}
+
+
+
+
+
+
+.stories {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
+
+.title-stories {
+    width: 500px;
+    background-image: url('../../assets/svg/quote.svg');
+    background-repeat: no-repeat;
+
+
+}
+
+.title-stories1 {
+    width: 445px;
+    text-align: start;
+    margin-left: 170px;
+    margin-top: 100px;
+
+
+
+    h2 {
+        font-size: 48px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+
+.title-stories-logo {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 468px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: start;
+    justify-content: center;
+    padding: 30px;
+    margin-left: 250px;
+    margin-top: 20px;
+    h2{
+        font-size: 18px;
+    }
+    span{
+        font-size: 18px;
+    }
+}
+
+.title-stories-logo1 {
+    display: flex;
+    flex-direction: column;
+    width: 445px;
+    height: 340px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+     
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: start;
+    justify-content: start;
+    padding: 30px;
+    margin-left: 150px;
+    margin-top: 200px;
+
+}
+
+.title-stories-logo2 {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 276px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: start;
+    justify-content: start;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+
+
+.getIn {
+    width: 1232px;
+    height: 432px;
+    background-image: url('../../assets/image/Elements.png');
+    background-color: #F7FAFE;
+    ;
+    background-repeat: no-repeat;
+    margin-top: 0 auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 150px auto;
+}
+
+
+.withUs {
+
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    h2 {
+        font-size: 64px;
+    }
+
+    button {
+        width: 280px;
+        height: 48px;
+        background-color: #B00000;
+        border: 1px solid #B00000;
+        border-radius: 10px;
+        color: #F7FAFE;
+
+    }
+}
+

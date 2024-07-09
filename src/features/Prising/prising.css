@@ -1,0 +1,164 @@
+.pricing-premuim {
+    margin: 60px auto;
+    text-align: center;
+}
+
+.pricing-premuim1 {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+
+.pricing-premium1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 80px;
+}
+
+label {
+    font-size: 30px;
+}
+
+.tab {
+    cursor: pointer;
+    padding-bottom: 10px;
+    position: relative;
+    text-align: center;
+    flex: 1;
+}
+
+.tab-input {
+    display: none;
+}
+
+.tab::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: darkred;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.tab-input:checked+.tab::after {
+    width: 100%;
+    left: 0;
+}
+
+.pricing-premium1::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    /* Adjust as needed */
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: darkred;
+}
+
+.block {
+    display: flex;
+    /* Изначально скрываем все блоки */
+    justify-content: start;
+    /* центрируем содержимое по горизонтали */
+    gap: 100px;
+    /* промежуток между блоками */
+    margin-top: 100px;
+
+    /* отступ сверху */
+}
+
+.block2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    width: 280px;
+    height: 716px;
+    border: 1px solid #a3a3a3;
+    border-radius: 20px;
+    padding: 20px;
+
+    h2 {
+        font-size: 28px;
+        text-align: start;
+    }
+
+    p {
+        font-size: 12px;
+        text-align: start;
+    }
+
+
+}
+
+
+.price {
+    text-align: start;
+
+    h3 {
+        font-size: 42px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        width: 215px;
+        height: 50px;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 10px;
+
+    }
+}
+
+.includes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+
+
+    .includes1 {
+        display: flex;
+        gap: 10px;
+        justify-content: start;
+        align-items: start;
+
+
+        p {
+            text-align: start;
+            font-size: 12px;
+            color: #808080;
+        }
+    }
+}
+
+.pricing-premuim h3 {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+
+.block2 {
+    opacity: 0;
+    /* Начально скрываем блоки */
+    transform: translateY(20px);
+    /* Начальное смещение по оси Y */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    /* Анимация появления */
+}
+
+.block2.show {
+    opacity: 1;
+    transform: translateY(0);
+}

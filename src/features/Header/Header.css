@@ -1,0 +1,206 @@
+/* Стили для ссылок */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Навигация */
+nav {
+    background: white;
+    color: black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    /* По умолчанию скрыто на мобильных */
+}
+
+nav a {
+    color: black;
+    font-weight: 650;
+    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Заголовок */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.logo {
+    width: 90px;
+    height: 60px;
+}
+
+.menu-toggle {
+    display: none;
+    /* По умолчанию скрыто */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Анимация для fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Применение анимации к элементам заголовка */
+.header a,
+.header img {
+    animation: fadeIn 1s ease-out;
+    animation-fill-mode: both;
+    /* Сохранение конечного состояния */
+}
+
+/* Опционально: задержка анимации для разных элементов */
+.header a:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.header a:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.header a:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.header a:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.header a:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.header img {
+    animation-delay: 1.2s;
+}
+
+/* Контактная секция */
+.contact {
+    display: flex;
+}
+
+/* Адаптивный дизайн */
+
+/* Мобильные устройства (до 600px) */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        /* По умолчанию скрыто на мобильных */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    .header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Показать кнопку меню на мобильных */
+    }
+
+    .logo {
+        width: 70px;
+        height: 50px;
+    }
+}
+
+/* Планшеты (от 600px до 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    .header {
+        gap: 15px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 55px;
+    }
+
+    .nav-links {
+        display: flex;
+        /* Показать навигацию на планшетах */
+        flex-direction: row;
+        width: auto;
+    }
+}
+
+/* Десктопы (от 900px и выше) */
+@media (min-width: 900px) {
+    nav {
+        justify-content: space-around;
+    }
+
+    .header {
+        gap: 20px;
+    }
+
+    .logo {
+        width: 90px;
+        height: 60px;
+    }
+
+    .nav-links {
+        display: flex;
+        /* Показать навигацию на десктопах */
+        flex-direction: row;
+        width: auto;
+    }
+
+    .menu-toggle {
+        display: none;
+        /* Скрыть кнопку меню на десктопах */
+    }
+}
+
+/* Показать/скрыть навигацию при клике на кнопку */
+.menu-toggle.active+.nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
